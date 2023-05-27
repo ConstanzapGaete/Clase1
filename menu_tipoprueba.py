@@ -38,7 +38,7 @@ def menubebidas():
         print("Error ")
 
 def menuboleta():
-    print ("*************Bienvenido a EL CHILOTE*************")
+    print("*************Bienvenido a EL CHILOTE*************")
     print("imprimir boleta ")
     print("1-Si ")
     print("2-No")
