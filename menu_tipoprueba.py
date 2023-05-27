@@ -1,5 +1,9 @@
 menu=True
 import os
+opcion_general=0
+opcion_platos=0
+opcion_bebidas=0
+opcion_boleta=0
 
 
 def menup():
@@ -9,8 +13,8 @@ def menup():
     print("3- Imprimir boleta")
     print("4- Salir")
     try:
-        opc1=int(input("Ingresa una opcion :  "))
-        return opc1
+        opcion_general=int(input("Ingresa una opcion :  "))
+        return opcion_general
     except:
         print("Error ")
 
@@ -21,8 +25,8 @@ def menuplatos():
     print("3- Chupe de centolla         $15.000")
     print("4- Empanadas                 $3.0000")
     try:  
-        opc1=int(input("Ingresa una opcion :  "))
-        return opc1
+        opcion_platos=int(input("Ingresa una opcion :  "))
+        return opcion_platos
     except:
         print("Error ")
 
@@ -32,33 +36,31 @@ def menubebidas():
     print("2- Bebida lata           $12.000")
     print("3- jugo                  $15.000")
     try:
-        opc1=int(input("Ingresa una opcion :  "))
-        return opc1
+        opcion_bebidas=int(input("Ingresa una opcion :  "))
+        return opcion_bebidas
     except:
         print("Error ")
 
 def menuboleta():
-    print("*************Bienvenido a EL CHILOTE*************")
+    print ("*************Bienvenido a EL CHILOTE*************")
     print("imprimir boleta ")
     print("1-Si ")
     print("2-No")
     try:  
-        opc1=int(input("Ingresa una opcion :  "))
-        return opc1
+        opcion_boleta=int(input("Ingresa una opcion :  "))
+        return opcion_boleta
     except:
         print("Error ")
 
-
+menu1=menup()
+menu2=menuplatos()
+menu3=menubebidas()
+menu3=menuboleta()
 while menu:
-    opc1=menup
-    if opc1 ==1:
+    if menu1<0 and menu1>2:
+        menup()
+    if menu2 <1 and menu2>3:
         menuplatos()
-    if opc1==2:
+    if menu3 <2 and menu3 >4:
         menubebidas()
-    if opc1==3:
-        menuboleta()
-    if opc1==4:
-        menu=False
-
-os.system("cls")
 print("salio del sistema")
